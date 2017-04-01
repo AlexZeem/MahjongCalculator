@@ -5,4 +5,5 @@ Rectangle {
     border.color: "black"
     border.width: 1
     opacity: 0.3
+    visible: constants.narkVisibility
 }

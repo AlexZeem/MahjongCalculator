@@ -3,8 +3,8 @@ import QtQuick.Controls 1.2
 
 Item {
     id: root
-    height: constants.tileHeight * 10
-    width: constants.tileWidth * 10
+    height: constants.tileHeight * 12
+    width: constants.tileWidth * 12
 
     Constants { id: constants }
 
@@ -18,11 +18,12 @@ Item {
         }
 
         TNark { color: "blue" }
+        Header {}
     }
 
     Item {
         id: comboPlaceholder
-        height: constants.tileHeight * 3
+        height: constants.tileHeight * 3 + 20
         anchors {
             top: headerPlaceholder.bottom
             left: parent.left
@@ -30,6 +31,7 @@ Item {
         }
 
         TNark { color: "blue" }
+        ComboPreview {}
     }
 
     Item {
@@ -42,11 +44,12 @@ Item {
         }
 
         TNark { color: "blue" }
+        ControlsRow {}
     }
 
     Item {
         id: tilesPlaceholder
-        height: constants.tileHeight * 4
+        height: constants.tileHeight * 4 + 25
         anchors {
             top: buttonRowPlaceholder.bottom
             left: parent.left
@@ -54,6 +57,7 @@ Item {
         }
 
         TNark { color: "blue" }
+        TilesPreview {}
     }
 }
 
