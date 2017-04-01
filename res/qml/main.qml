@@ -31,7 +31,7 @@ Item {
         }
 
         TNark { color: "blue" }
-        ComboPreview {}
+        ComboPreview { id: combo }
     }
 
     Item {
@@ -57,7 +57,11 @@ Item {
         }
 
         TNark { color: "blue" }
-        TilesPreview {}
+        TilesPreview {
+            Component.onCompleted: {
+                selected.connect(combo.createItem)
+            }
+        }
     }
 }
 

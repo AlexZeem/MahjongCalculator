@@ -1,7 +1,9 @@
 import QtQuick 2.0
 
 Item {
+    id: root
     anchors.fill: parent
+    signal selected(string icon)
 
     Column {
         id: suits
@@ -21,6 +23,7 @@ Item {
                     height: constants.tileHeight
                     width: constants.tileWidth
                     icon: "qrc:/res/icons/tiles/s" + (index + 1) + ".png"
+                    Component.onCompleted: selected.connect(root.selected)
                 }
             }
         }
@@ -34,6 +37,7 @@ Item {
                     height: constants.tileHeight
                     width: constants.tileWidth
                     icon: "qrc:/res/icons/tiles/d" + (index + 1) + ".png"
+                    Component.onCompleted: selected.connect(root.selected)
                 }
             }
         }
@@ -47,6 +51,7 @@ Item {
                     height: constants.tileHeight
                     width: constants.tileWidth
                     icon: "qrc:/res/icons/tiles/b" + (index + 1) + ".png"
+                    Component.onCompleted: selected.connect(root.selected)
                 }
             }
         }
@@ -65,42 +70,49 @@ Item {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/e.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/s.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/w.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/n.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/dw.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/dg.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
 
         TButton {
             height: constants.tileHeight
             width: constants.tileWidth
             icon: "qrc:/res/icons/tiles/dr.png"
+            Component.onCompleted: selected.connect(root.selected)
         }
     }
 
@@ -119,6 +131,7 @@ Item {
                 height: constants.tileHeight
                 width: constants.tileWidth
                 icon: "qrc:/res/icons/tiles/ss" + (index + 1) + ".png"
+                Component.onCompleted: selected.connect(root.selected)
             }
         }
 
@@ -129,6 +142,7 @@ Item {
                 height: constants.tileHeight
                 width: constants.tileWidth
                 icon: "qrc:/res/icons/tiles/ff" + (index + 1) + ".png"
+                Component.onCompleted: selected.connect(root.selected)
             }
         }
     }

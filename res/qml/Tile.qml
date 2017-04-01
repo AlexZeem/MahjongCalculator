@@ -4,8 +4,6 @@ import QtQuick.Controls 1.2
 Button {
     id: root
     property alias icon: icon.source
-    signal selected(string icon)
-
     height: constants.tileHeight
     width: constants.tileWidth
 
@@ -22,6 +20,6 @@ Button {
     }
 
     onClicked: {
-        root.selected(icon.source)
+        root.destroy()
     }
 }
