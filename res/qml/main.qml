@@ -44,7 +44,12 @@ Item {
         }
 
         TNark { color: "blue" }
-        ControlsRow {}
+        ControlsRow {
+            chiBtn.onClicked: {
+                preview.noblesEnabled = !chiBtn.checked
+                preview.seasonsFlowersEnabled = !chiBtn.checked
+            }
+        }
     }
 
     Item {
@@ -58,6 +63,7 @@ Item {
 
         TNark { color: "blue" }
         TilesPreview {
+            id: preview
             Component.onCompleted: {
                 selected.connect(combo.createItem)
             }

@@ -15,10 +15,15 @@ Button {
         fillMode: Image.PreserveAspectFit
     }
 
-    TNark { id: overlay; color: "gray" }
+    TOverlay { id: pressedOverlay; color: "gray" }
+    TOverlay { id: enabledOverlay; color: "white" }
+
+    onEnabledChanged: {
+        enabledOverlay.visible = !enabled
+    }
 
     onPressedChanged:  {
-        overlay.visible = pressed
+        pressedOverlay.visible = pressed
     }
 
     onClicked: {

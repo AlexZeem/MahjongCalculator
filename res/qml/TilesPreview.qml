@@ -2,8 +2,11 @@ import QtQuick 2.0
 
 Item {
     id: root
-    anchors.fill: parent
+    property alias noblesEnabled: nobles.enabled
+    property alias seasonsFlowersEnabled: seasonsFlowers.enabled
     signal selected(string icon)
+
+    anchors.fill: parent
 
     Column {
         id: suits
@@ -117,6 +120,7 @@ Item {
     }
 
     Row {
+        id: seasonsFlowers
         anchors {
             top: nobles.bottom
             topMargin: 5
