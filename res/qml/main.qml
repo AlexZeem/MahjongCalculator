@@ -3,61 +3,57 @@ import QtQuick.Controls 1.2
 
 Item {
     id: root
-    anchors.fill: parent
+    height: constants.tileHeight * 10
+    width: constants.tileWidth * 10
 
     Constants { id: constants }
 
-    //combination placeholder
-    Rectangle {
-        id: combo
+    Item {
+        id: headerPlaceholder
+        height: constants.tileHeight
         anchors {
-            top: root.top
-            left: root.left
-            right: root.right
+            top: parent.top
+            left: parent.left
+            right: parent.right
         }
 
-        color: "steelblue"
-        height: constants.tileHeight * 2
+        TNark { color: "blue" }
     }
 
-    //button row placeholder
-    Row {
-        id: btns
+    Item {
+        id: comboPlaceholder
+        height: constants.tileHeight * 3
         anchors {
-            top: combo.bottom
-            left: root.left
-            right: root.right
+            top: headerPlaceholder.bottom
+            left: parent.left
+            right: parent.right
         }
 
-        Button {
-            id: chiBtn
-            text: "Chi"
-        }
-        Button {
-            id: ponBtn
-            text: "Pon"
-        }
-        Button {
-            id: kanBtn
-            text: "Kan"
-        }
-        Button {
-            id: kanClosedBtn
-            text: "Closed Kan"
-        }
+        TNark { color: "blue" }
     }
 
-    //tiles placeholder
-    Rectangle {
-        id: tiles
+    Item {
+        id: buttonRowPlaceholder
+        height: constants.tileHeight
         anchors {
-            top: btns.bottom
-            left: root.left
-            right: root.right
+            top: comboPlaceholder.bottom
+            left: parent.left
+            right: parent.right
         }
 
-        color: "steelblue"
+        TNark { color: "blue" }
+    }
+
+    Item {
+        id: tilesPlaceholder
         height: constants.tileHeight * 4
+        anchors {
+            top: buttonRowPlaceholder.bottom
+            left: parent.left
+            right: parent.right
+        }
+
+        TNark { color: "blue" }
     }
 }
 
