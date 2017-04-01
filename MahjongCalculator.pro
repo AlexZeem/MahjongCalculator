@@ -17,8 +17,6 @@ HEADERS += \
 SOURCES += \
     $$PWD/src/*.cpp
 
-RESOURCES += \
-
 QML_FILES += \
     $$PWD/res/qml/*.qml
 
@@ -29,7 +27,7 @@ DISTFILES += \
    $$JS_FILES
 
 RESOURCES += \
-
+    icons.qrc
 
 # Default rules for deployment.
 include(deployment.pri)

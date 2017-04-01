@@ -1,5 +1,4 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.2
 
 Item {
     anchors.fill: parent
@@ -13,25 +12,48 @@ Item {
         }
         spacing: 5
 
-        Repeater {
-            model: 3
+        Row {
+            spacing: 5
+            Repeater {
+                model: 9
 
-            Row {
-                spacing: 5
-                Repeater {
-                    model: 9
+                TButton {
+                    height: constants.tileHeight
+                    width: constants.tileWidth
+                    icon: "qrc:/res/icons/tiles/s" + (index + 1) + ".png"
+                }
+            }
+        }
 
-                    Button {
-                        height: constants.tileHeight
-                        width: constants.tileWidth
-                        TNark { color: "green" }
-                    }
+        Row {
+            spacing: 5
+            Repeater {
+                model: 9
+
+                TButton {
+                    height: constants.tileHeight
+                    width: constants.tileWidth
+                    icon: "qrc:/res/icons/tiles/d" + (index + 1) + ".png"
+                }
+            }
+        }
+
+        Row {
+            spacing: 5
+            Repeater {
+                model: 9
+
+                TButton {
+                    height: constants.tileHeight
+                    width: constants.tileWidth
+                    icon: "qrc:/res/icons/tiles/b" + (index + 1) + ".png"
                 }
             }
         }
     }
 
     Row {
+        id: nobles
         anchors {
             top: suits.bottom
             topMargin: 5
@@ -39,13 +61,74 @@ Item {
         }
         spacing: 5
 
-        Repeater {
-            model: 7
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/e.png"
+        }
 
-            Button {
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/s.png"
+        }
+
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/w.png"
+        }
+
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/n.png"
+        }
+
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/dw.png"
+        }
+
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/dg.png"
+        }
+
+        TButton {
+            height: constants.tileHeight
+            width: constants.tileWidth
+            icon: "qrc:/res/icons/tiles/dr.png"
+        }
+    }
+
+    Row {
+        anchors {
+            top: nobles.bottom
+            topMargin: 5
+            horizontalCenter: nobles.horizontalCenter
+        }
+        spacing: 5
+
+        Repeater {
+            model: 4
+
+            TButton {
                 height: constants.tileHeight
                 width: constants.tileWidth
-                TNark { color: "green" }
+                icon: "qrc:/res/icons/tiles/ss" + (index + 1) + ".png"
+            }
+        }
+
+        Repeater {
+            model: 4
+
+            TButton {
+                height: constants.tileHeight
+                width: constants.tileWidth
+                icon: "qrc:/res/icons/tiles/ff" + (index + 1) + ".png"
             }
         }
     }

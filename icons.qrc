@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icons/tiles/b1.png</file>
+        <file>res/icons/tiles/b2.png</file>
+        <file>res/icons/tiles/b3.png</file>
+        <file>res/icons/tiles/b4.png</file>
+        <file>res/icons/tiles/b5.png</file>
+        <file>res/icons/tiles/b6.png</file>
+        <file>res/icons/tiles/b7.png</file>
+        <file>res/icons/tiles/b8.png</file>
+        <file>res/icons/tiles/b9.png</file>
+        <file>res/icons/tiles/d1.png</file>
+        <file>res/icons/tiles/d2.png</file>
+        <file>res/icons/tiles/d3.png</file>
+        <file>res/icons/tiles/d4.png</file>
+        <file>res/icons/tiles/d5.png</file>
+        <file>res/icons/tiles/d6.png</file>
+        <file>res/icons/tiles/d7.png</file>
+        <file>res/icons/tiles/d8.png</file>
+        <file>res/icons/tiles/d9.png</file>
+        <file>res/icons/tiles/dg.png</file>
+        <file>res/icons/tiles/dr.png</file>
+        <file>res/icons/tiles/dw.png</file>
+        <file>res/icons/tiles/e.png</file>
+        <file>res/icons/tiles/ff1.png</file>
+        <file>res/icons/tiles/ff2.png</file>
+        <file>res/icons/tiles/ff3.png</file>
+        <file>res/icons/tiles/ff4.png</file>
+        <file>res/icons/tiles/n.png</file>
+        <file>res/icons/tiles/s.png</file>
+        <file>res/icons/tiles/s1.png</file>
+        <file>res/icons/tiles/s2.png</file>
+        <file>res/icons/tiles/s3.png</file>
+        <file>res/icons/tiles/s4.png</file>
+        <file>res/icons/tiles/s5.png</file>
+        <file>res/icons/tiles/s6.png</file>
+        <file>res/icons/tiles/s7.png</file>
+        <file>res/icons/tiles/s8.png</file>
+        <file>res/icons/tiles/s9.png</file>
+        <file>res/icons/tiles/ss1.png</file>
+        <file>res/icons/tiles/ss2.png</file>
+        <file>res/icons/tiles/ss3.png</file>
+        <file>res/icons/tiles/ss4.png</file>
+        <file>res/icons/tiles/w.png</file>
+    </qresource>
+</RCC>

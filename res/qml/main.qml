@@ -49,7 +49,7 @@ Item {
 
     Item {
         id: tilesPlaceholder
-        height: constants.tileHeight * 4 + 25
+        height: constants.tileHeight * 5 + 30
         anchors {
             top: buttonRowPlaceholder.bottom
             left: parent.left
