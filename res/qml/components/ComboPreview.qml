@@ -5,6 +5,10 @@ Item {
     property int itemCounter: 0
     anchors.fill: parent
 
+    function decrementCounter() {
+        itemCounter--;
+    }
+
     function createItem(itemIcon) {
         if (itemCounter >= 9 * 3) {
             console.log("Cannot add more items", itemIcon)
@@ -12,28 +16,16 @@ Item {
         }
 
         var component = Qt.createComponent("TileDynamic.qml")
-        var object = component.createObject(itemCounter < 9 ? buttonRow1 : itemCounter < 18 ? buttonRow2 : buttonRow3)
+        var object = component.createObject(container)
         object.icon = itemIcon
+        object.itemDestroy.connect(root.decrementCounter)
         itemCounter++;
     }
 
-    Column {
+    Grid {
+        id: container
         anchors.centerIn: parent
+        columns: 9
         spacing: 5
-
-        Row {
-            id: buttonRow1
-            spacing: 5
-        }
-
-        Row {
-            id: buttonRow2
-            spacing: 5
-        }
-
-        Row {
-            id: buttonRow3
-            spacing: 5
-        }
     }
 }
