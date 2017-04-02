@@ -6,7 +6,7 @@ Item {
     anchors.fill: parent
 
     function createItem(itemIcon) {
-        var component = Qt.createComponent("Tile.qml")
+        var component = Qt.createComponent("TileDynamic.qml")
         var object = component.createObject(itemCounter < 9 ? buttonRow1 : itemCounter < 18 ? buttonRow2 : buttonRow3)
         object.icon = itemIcon
         itemCounter++;

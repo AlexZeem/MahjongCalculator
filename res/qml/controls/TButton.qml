@@ -6,9 +6,6 @@ Button {
     property alias icon: icon.source
     signal selected(string icon)
 
-    height: constants.tileHeight
-    width: constants.tileWidth
-
     Image {
         id: icon
         anchors.centerIn: parent

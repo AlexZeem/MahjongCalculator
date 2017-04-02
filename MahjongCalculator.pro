@@ -2,7 +2,7 @@
 
 TEMPLATE = app
 
-QT += qml quick widgets
+QT += qml quick widgets core
 
 PROJECT_ROOT_DIR = ./
 
@@ -13,11 +13,16 @@ DESTDIR     = $${BUILD_DIR}/bin
 RCC_DIR     = $${BUILD_DIR}/rcc
 
 HEADERS += \
+    $$PWD/src/tiles/*.h \
+    #$$PWD/src/*.h
 
 SOURCES += \
+    $$PWD/src/tiles/*.cpp \
     $$PWD/src/*.cpp
 
 QML_FILES += \
+    $$PWD/res/qml/components/*.qml \
+    $$PWD/res/qml/controls/*.qml \
     $$PWD/res/qml/*.qml
 
 JS_FILES += \

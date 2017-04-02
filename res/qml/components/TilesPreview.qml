@@ -22,9 +22,7 @@ Item {
             Repeater {
                 model: 9
 
-                TButton {
-                    height: constants.tileHeight
-                    width: constants.tileWidth
+                TileBase {
                     icon: "qrc:/res/icons/tiles/s" + (index + 1) + ".png"
                     Component.onCompleted: selected.connect(root.selected)
                 }
@@ -36,9 +34,7 @@ Item {
             Repeater {
                 model: 9
 
-                TButton {
-                    height: constants.tileHeight
-                    width: constants.tileWidth
+                TileBase {
                     icon: "qrc:/res/icons/tiles/d" + (index + 1) + ".png"
                     Component.onCompleted: selected.connect(root.selected)
                 }
@@ -50,9 +46,7 @@ Item {
             Repeater {
                 model: 9
 
-                TButton {
-                    height: constants.tileHeight
-                    width: constants.tileWidth
+                TileBase {
                     icon: "qrc:/res/icons/tiles/b" + (index + 1) + ".png"
                     Component.onCompleted: selected.connect(root.selected)
                 }
@@ -69,51 +63,37 @@ Item {
         }
         spacing: 5
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/e.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/s.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/w.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/n.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/dw.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/dg.png"
             Component.onCompleted: selected.connect(root.selected)
         }
 
-        TButton {
-            height: constants.tileHeight
-            width: constants.tileWidth
+        TileBase {
             icon: "qrc:/res/icons/tiles/dr.png"
             Component.onCompleted: selected.connect(root.selected)
         }
@@ -131,9 +111,7 @@ Item {
         Repeater {
             model: 4
 
-            TButton {
-                height: constants.tileHeight
-                width: constants.tileWidth
+            TileBase {
                 icon: "qrc:/res/icons/tiles/ss" + (index + 1) + ".png"
                 Component.onCompleted: selected.connect(root.selected)
             }
@@ -142,9 +120,7 @@ Item {
         Repeater {
             model: 4
 
-            TButton {
-                height: constants.tileHeight
-                width: constants.tileWidth
+            TileBase {
                 icon: "qrc:/res/icons/tiles/ff" + (index + 1) + ".png"
                 Component.onCompleted: selected.connect(root.selected)
             }
