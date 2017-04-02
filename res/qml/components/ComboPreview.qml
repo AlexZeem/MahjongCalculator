@@ -6,6 +6,11 @@ Item {
     anchors.fill: parent
 
     function createItem(itemIcon) {
+        if (itemCounter >= 9 * 3) {
+            console.log("Cannot add more items", itemIcon)
+            return;
+        }
+
         var component = Qt.createComponent("TileDynamic.qml")
         var object = component.createObject(itemCounter < 9 ? buttonRow1 : itemCounter < 18 ? buttonRow2 : buttonRow3)
         object.icon = itemIcon
